@@ -2,7 +2,7 @@ GemFodder::Application.routes.draw do
   resources :runs
   resources :shoes
   resources :users
-	match "/" => "runs#show"
+	match "/", :to => "runs#show"
 	
   # The priority is based upon order of creation:
   # first created -> highest priority.
