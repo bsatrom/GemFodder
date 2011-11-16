@@ -1,0 +1,31 @@
+<h1>Listing shoes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>User</th>
+    <th>Max mileage</th>
+    <th>Auto order</th>
+    <th>Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shoes.each do |shoe| %>
+  <tr>
+    <td><%= shoe.name %></td>
+    <td><%= shoe.user_id %></td>
+    <td><%= shoe.max_mileage %></td>
+    <td><%= shoe.auto_order %></td>
+    <td><%= shoe.url %></td>
+    <td><%= link_to 'Show', shoe %></td>
+    <td><%= link_to 'Edit', edit_shoe_path(shoe) %></td>
+    <td><%= link_to 'Destroy', shoe, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shoe', new_shoe_path %>

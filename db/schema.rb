@@ -11,6 +11,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20111116221918) do
+
+  create_table "runs", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "shoe_id"
+    t.decimal  "distance"
+    t.datetime "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "shoes", :force => true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.integer  "max_mileage"
+    t.boolean  "auto_order"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

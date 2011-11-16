@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @shoe.name %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @shoe.user_id %>
+</p>
+
+<p>
+  <b>Max mileage:</b>
+  <%= @shoe.max_mileage %>
+</p>
+
+<p>
+  <b>Auto order:</b>
+  <%= @shoe.auto_order %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @shoe.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_shoe_path(@shoe) %> |
+<%= link_to 'Back', shoes_path %>
